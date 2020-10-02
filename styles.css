@@ -35,3 +35,9 @@ h1,h2, h3 {
 #contact {
   background-color: #ff9a00	;
 }
+
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  
+}
