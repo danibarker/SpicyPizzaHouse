@@ -4,12 +4,22 @@ html, body {
 h1,h2, h3 {
   text-align: center;  
 }
-
-.pizzaimg {
+.col-6 {
+    text-align: center;
+}
+.toppingSvg {
+    position: absolute;
+    top:60px;
+    left:200px;
+}
+.pizzaSvg {
+    position: relative;
     text-align: center;
 }
 
+
 #blankPizza {
+    
     width: 10rem;
 }
 .center {

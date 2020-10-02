@@ -49,23 +49,23 @@
             <label for="pizzasize">Choose a size:</label>
 
             <select id="pizzasize">
-              <option value="volvo">14"</option>
-              <option value="saab">16"</option>
-              <option value="opel">18"</option>
-              <option value="audi">20"</option>
+              <option value=14>14"</option>
+              <option value=16>16"</option>
+              <option value=18>18"</option>
+              <option value=20>20"</option>
             </select>
             <h4>Toppings</h4>
             <div>
              
               Pepperoni <br>
-              <button class='btn btn-primary'>-</button>
-              <button class='btn btn-primary'>+</button>
+              <button class='btn btn-primary' onclick="removeTopping('pepperoni')">-</button>
+              <button class='btn btn-primary' onclick="addTopping('pepperoni')">+</button>
             </div>
             <div>
              
               Pineapple <br>
-              <button class='btn btn-primary'>-</button>
-              <button class='btn btn-primary'>+</button>
+              <button class='btn btn-primary' onclick="removeTopping('pineapple')">-</button>
+              <button class='btn btn-primary' onclick="addTopping('pineapple')">+</button>
             </div>
             <div>
              
@@ -77,12 +77,20 @@
           </div>
           <div class="col-6">
             <h3>Pizza</h3>
-            <div id="pizza" class='pizzaimg'>
-              <img id='blankPizza' src="images/blank-pizza.png" alt="">
-            </div>
+            
+            <svg class='pizzaSvg' height="300" width="300">
+              <circle cx='100' cy='100' r='100' stroke="brown" stroke-width="3" fill="beige" />
+              
+            </svg>
+            <svg class='toppingSvg'>
+              <circle cx="40" cy="20" r="5" stroke="black" stroke-width="1" fill="red" />
+              <circle cx="30" cy="30" r="5" stroke="black" stroke-width="1" fill="red" /> 
+            </svg>
+            
           </div>
           <div class="col-3">
             <h3>Make it!</h3>
+            <div id='pizzaCost'></div>
           </div>
         </div>
       </section>
