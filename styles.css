@@ -1,3 +1,15 @@
 h1,h2 {
   text-align: center;  
 }
+
+.bg-pizzared {
+  background-color: #ff0000 !important;
+}
+
+#hours {
+  background-color: #ff9a00	;
+}
+
+#contact {
+  background-color: #ff9a00	;
+}
