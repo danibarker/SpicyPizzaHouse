@@ -11,11 +11,19 @@
     <title>Spicy Pizza House!</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-sm navbar-light bg-pizzared">
-        <img src="images/pizza-svgrepo-com.svg" width="40px" alt="PizzaLogo">
-      
-        
-        <ul class="navbar-nav mr-auto">
+    <nav class="navbar navbar-expand-lg navbar-light bg-pizzared justify-content-between">
+      <a class="navbar-brand">
+        <img src="images/pizza-svgrepo-com.svg" width="150px" alt="PizzaLogo">
+        Spicy Pizza House
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto">
+
+        </div>
+        <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="#order">Order</a>
           </li>
@@ -29,10 +37,17 @@
             <a class="nav-link" href="#contact">Contact Us</a>
           </li>
         </ul>
+<<<<<<< HEAD
         
       </nav>
       <div class='container'>
       <section id="order">
+=======
+      </div>
+    </nav>
+
+      <section id="order" class="container pt-3 pb-3">
+>>>>>>> 381b9538fa15397417932fe03ad37633519828a5
         <h2>Order</h2>
         <div class="row">
           <div class="col-3">
@@ -76,19 +91,34 @@
           </div>
         </div>
       </section>
-      <section id="hours">
+      <section id="hours" class="container text-center pt-3 pb-3" >
         <h2>Hours</h2>
+        <div>
+            Monday: 10AM-Midnight<br/>
+            Tuesday: 10AM-Midnight <br/>
+            Wednesday: 10AM-Midnight <br/>
+            Thursday: 10AM-Midnight <br/>
+            Friday: 10AM-Midnight <br/>
+            Saturday: 10AM-2AM <br/>
+            Sunday: 10AM-2AM <br/>
+        </div>
       </section>
-      <section id="reserve">
+      <section id="reserve" class="container pt-3 pb-3">
         <h2>Reserve</h2>
-        <input type="date" id="myDate" value="2014-02-09">
-        <button id="get-date">Reserve</button>
-        <p id="date-selected"></p>
-      
+        <div>
+        <input type="date" id="myDate" value="2020-09-09">
+        <button id="get-date">Reservation Date</button>
+        <p id="date-select"></p>
+      </div>
+      <div>
+        <input type="time" id="appt" name="appt">
+        <button id="get-time">Reserve Time</button>
+        <p id="time-select"></p>
+      </div>
       
       </section>
-      <section id="contact">
-        <h2>Contact Us</h2>
+      <section id="contact" class="container pt-3 pb-3">
+        <h2 class="pt-2">Contact Us</h2>
         <div class="center">Phone Number 403 123 4567</div>
       </section>
       </div>
