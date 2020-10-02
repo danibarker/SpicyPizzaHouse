@@ -37,17 +37,10 @@
             <a class="nav-link" href="#contact">Contact Us</a>
           </li>
         </ul>
-<<<<<<< HEAD
-        
-      </nav>
-      <div class='container'>
-      <section id="order">
-=======
       </div>
     </nav>
 
       <section id="order" class="container pt-3 pb-3">
->>>>>>> 381b9538fa15397417932fe03ad37633519828a5
         <h2>Order</h2>
         <div class="row">
           <div class="col-3">
@@ -77,14 +70,16 @@
             <div>
              
               Bacon <br>
-              <button class='btn btn-primary'>-</button>
-              <button class='btn btn-primary'>+</button>
+              <button class='btn btn-primary' onclick="removeTopping('bacon')">-</button>
+              <button class='btn btn-primary' onclick="addTopping('bacon')">+</button>
             </div>
 
           </div>
           <div class="col-6">
             <h3>Pizza</h3>
-            <div class='pizzaimg'><img id='blankPizza' src="images/blank-pizza.png" alt=""></div>
+            <div id="pizza" class='pizzaimg'>
+              <img id='blankPizza' src="images/blank-pizza.png" alt="">
+            </div>
           </div>
           <div class="col-3">
             <h3>Make it!</h3>
@@ -128,5 +123,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="index.js"></script>
+    <script src="order.js"></script>
   </body>
 </html>
