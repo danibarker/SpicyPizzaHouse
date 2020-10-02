@@ -9,3 +9,19 @@ h1,h2, h3 {
 #blankPizza {
     width: 10rem;
 }
+.center {
+  text-align: center;
+  font-size: large;
+}
+
+.bg-pizzared {
+  background-color: #ff0000 !important;
+}
+
+#hours {
+  background-color: #ff9a00	;
+}
+
+#contact {
+  background-color: #ff9a00	;
+}
