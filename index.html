@@ -98,16 +98,45 @@
       </section>
       <section id="reserve" class="container pt-3 pb-3">
         <h2>Reserve</h2>
-        <div>
+        <div class="reserve-container">
+          <div class="mr-4">
+          <label for="date">Date:</label>
         <input type="date" id="myDate" value="2020-09-09">
-        <button id="get-date">Reservation Date</button>
-        <p id="date-select"></p>
+        <label for="time">Time:</label>
+        <input type="time" id="appt" name="appt">        
       </div>
-      <div>
+          <div class="mr-4">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname">
+          </div>
+         <div class="mr-4">
+          <label for="lname">Last name:</label>
+          <input type="text" id="lname" name="lname">
+         </div>
+         <div class="mr-4">
+          <label for="number">Phone number:</label>
+          <input type="text" id="number" name="number">
+         </div>
+         <div class="mr-4">
+          <label for="email">email:</label>
+          <input type="text" id="email" name="email">
+         </div>
+         <div class="mr-4">
+          <label for="guest">Number of Guest(s):</label>
+          <input type="text" id="guest" name="guest">
+         </div>         
+        </div>
+        <div class="center">
+        <button id="get-date">Make Reservation</button>
+        <div id="date-select"></div>
+        <div id="time-select"></div>
+      </div>
+      
+      <!-- <div>
         <input type="time" id="appt" name="appt">
         <button id="get-time">Reserve Time</button>
         <p id="time-select"></p>
-      </div>
+      </div> -->
       
       </section>
       <section id="contact" class="container pt-3 pb-3">

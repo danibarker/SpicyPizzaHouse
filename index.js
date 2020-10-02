@@ -9,15 +9,20 @@ function dateSelected() {
     // var x = document.getElementById("myDate").value;
     // document.getElementById("date-selected").innerHTML = x;
     dateSelect.textContent = date.value
-  }
-
-  const timeSelected = ()=> {
     if(appt.value === "") {
       alert('Please Select Time')
     } else {
   timeSelect.textContent = appt.value + ' Hrs'
   }
-}
+  }
+
+//   const timeSelected = ()=> {
+//     if(appt.value === "") {
+//       alert('Please Select Time')
+//     } else {
+//   timeSelect.textContent = appt.value + ' Hrs'
+//   }
+// }
 
   btnDate.addEventListener('click', dateSelected)
   btnTime.addEventListener('click', timeSelected)
