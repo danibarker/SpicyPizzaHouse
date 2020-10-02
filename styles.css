@@ -9,8 +9,8 @@ h1,h2, h3 {
 }
 .toppingSvg {
     position: absolute;
-    top:60px;
-    left:200px;
+    top:0;
+    left:0;
 }
 .pizzaSvg {
     position: relative;
