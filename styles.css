@@ -2,11 +2,11 @@ h1,h2 {
   text-align: center;  
 }
 
-<<<<<<< HEAD
 .center {
   text-align: center;
   font-size: large;
-=======
+}
+
 .bg-pizzared {
   background-color: #ff0000 !important;
 }
@@ -17,5 +17,4 @@ h1,h2 {
 
 #contact {
   background-color: #ff9a00	;
->>>>>>> e5c87020cb843e699af8c138d06db6e9992d9490
 }
