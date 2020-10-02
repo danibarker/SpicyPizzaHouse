@@ -44,10 +44,40 @@
         <h2 class="pt-2">Order</h2>
         <div class="row">
           <div class="col-3">
-            <h3>Toppings</h3>
+            <h3>Options</h3>
+            <h4>Size</h4>
+            <label for="pizzasize">Choose a size:</label>
+
+            <select id="pizzasize">
+              <option value="volvo">14"</option>
+              <option value="saab">16"</option>
+              <option value="opel">18"</option>
+              <option value="audi">20"</option>
+            </select>
+            <h4>Toppings</h4>
+            <div>
+             
+              Pepperoni <br>
+              <button class='btn btn-primary'>-</button>
+              <button class='btn btn-primary'>+</button>
+            </div>
+            <div>
+             
+              Pineapple <br>
+              <button class='btn btn-primary'>-</button>
+              <button class='btn btn-primary'>+</button>
+            </div>
+            <div>
+             
+              Bacon <br>
+              <button class='btn btn-primary'>-</button>
+              <button class='btn btn-primary'>+</button>
+            </div>
+
           </div>
           <div class="col-6">
             <h3>Pizza</h3>
+            <div class='pizzaimg'><img id='blankPizza' src="images/blank-pizza.png" alt=""></div>
           </div>
           <div class="col-3">
             <h3>Make it!</h3>
@@ -67,17 +97,24 @@
         </div>
       </section>
       <section id="reserve">
-        <h2 class="pt-2">Reserve</h2>
-        <input type="date" id="myDate" value="2014-02-09">
-        <button id="get-date">Reserve</button>
-        <p id="date-selected"></p>
-      
+        <h2>Reserve</h2>
+        <div>
+        <input type="date" id="myDate" value="2020-09-09">
+        <button id="get-date">Reservation Date</button>
+        <p id="date-select"></p>
+      </div>
+      <div>
+        <input type="time" id="appt" name="appt">
+        <button id="get-time">Reserve Time</button>
+        <p id="time-select"></p>
+      </div>
       
       </section>
       <section id="contact">
         <h2 class="pt-2">Contact Us</h2>
         <div class="center">Phone Number 403 123 4567</div>
       </section>
+      </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
