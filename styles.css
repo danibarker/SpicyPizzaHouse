@@ -18,6 +18,13 @@ h1,h2, h3 {
   background-color: #ff0000 !important;
 }
 
+.hours-day {
+  width: 20em;
+}
+.hours-times {
+  width: 30em;
+}
+
 #hours {
   background-color: #ff9a00	;
 }
