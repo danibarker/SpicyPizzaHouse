@@ -1,7 +1,14 @@
-h1,h2 {
+h1,h2, h3 {
   text-align: center;  
 }
 
+ .pizzaimg {
+    text-align: center;
+}
+
+#blankPizza {
+    width: 10rem;
+}
 .center {
   text-align: center;
   font-size: large;
