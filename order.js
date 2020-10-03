@@ -6,7 +6,6 @@ $('html, body').css({
 $("a").click(function () {
     $("section").each((i, obj) => $(obj).removeClass('currentSection'));
     $($(this).attr('href')).addClass('currentSection')
-
 });
 
 let orderItem = {
@@ -84,14 +83,15 @@ let basePrices = {
     20: 24.99
 }
 function addTopping(toppingName) {
-    pizzaToppings[toppingName].quantity++;
-    
+    pizzaToppings[toppingName].quantity++
     updateOrder();
 }
 
 function removeTopping(toppingName) {
-    pizzaToppings[toppingName].quantity--;
-    
+    pizzaToppings[toppingName].quantity--
+    if (pizzaToppings[toppingName].quantity < 0) {
+        pizzaToppings[toppingName].quantity = 0
+    }
     updateOrder();
 }
 
@@ -243,4 +243,5 @@ function showPizza() {
             <div id='pizzaCost'></div>
           </div>
         </div>`);
+    updateOrder();
 }
