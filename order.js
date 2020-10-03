@@ -1,3 +1,13 @@
+$('html, body').css({
+    overflow: 'hidden',
+    height: '100%'
+});
+$("a").click(function () {
+    $("section").each((i, obj) => $(obj).removeClass('currentSection'));
+    $($(this).attr('href')).addClass('currentSection')
+
+});
+
 let pizzaToppings = {
     bacon: {
         quantity: 0,
