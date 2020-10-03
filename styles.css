@@ -59,18 +59,24 @@ a:link {
 /* visited link */
 a:visited {
   color: whitesmoke;
+  text-decoration: none;
 }
 
 /* mouse over link */
 a:hover {
-  color: whitesmoke
+  color: whitesmoke;
+  text-decoration: none;
+  
 }
 
 /* selected link */
 a:active {
   color: whitesmoke;
 }
-
+a.nav-link {
+  font-size: large;
+  font-weight: bold;
+}
 
 #blankPizza {
     width: 10rem;
@@ -79,6 +85,8 @@ a:active {
   text-align: center;
   font-size: large;
 }
+
+
 
 #addToCart {
     position: absolute;
