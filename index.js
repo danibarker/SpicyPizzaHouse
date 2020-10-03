@@ -10,18 +10,24 @@ const number = document.getElementById('number')
 const email = document.getElementById('email')
 const guest = document.getElementById('guest')
 const fulName = document.getElementById('full-name')
+const thanks = document.getElementById('thanks')
 
 
 function dateSelected() {
 
-    dateSelect.textContent = date.value
+    
     if(appt.value === "" ||
     fname.value === '' ||
     number.value ==='') {
       alert('Please Select Time, Enter Name and Phone Number')
     } else {
-  timeSelect.textContent = appt.value + ' Hrs';
-  fulName.textContent = fname.value + " " + lname.value
+ 
+      window.open("#thanks","_self")
+      fulName.textContent = `Thank you ${fname.value} for your reservation`
+      dateSelect.textContent = ` See you on ${date.value} at ${appt.value} Hrs` 
+      
+    
+ 
   }
   }
 
