@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -54,7 +54,7 @@
             <h4>Size</h4>
             <label for="pizzasize">Choose a size:</label>
 
-            <select id="pizzasize">
+            <select onchange="updateOrder()" id="pizzasize">
               <option value=14>14"</option>
               <option value=16>16"</option>
               <option value=18>18"</option>
@@ -64,34 +64,33 @@
             <div>
              
               Pepperoni <br>
-              <button class='btn btn-primary' onclick="removeTopping('pepperoni')">-</button>
-              <button class='btn btn-primary' onclick="addTopping('pepperoni')">+</button>
+              <button class='btn btn-primary' onclick="removeTopping('pepperoni')">Less</button>
+              <button class='btn btn-primary' onclick="addTopping('pepperoni')">More</button>
             </div>
             <div>
              
               Pineapple <br>
-              <button class='btn btn-primary' onclick="removeTopping('pineapple')">-</button>
-              <button class='btn btn-primary' onclick="addTopping('pineapple')">+</button>
+              <button class='btn btn-primary' onclick="removeTopping('pineapple')">Less</button>
+              <button class='btn btn-primary' onclick="addTopping('pineapple')">More</button>
             </div>
             <div>
              
               Bacon <br>
-              <button class='btn btn-primary' onclick="removeTopping('bacon')">-</button>
-              <button class='btn btn-primary' onclick="addTopping('bacon')">+</button>
+              <button class='btn btn-primary' onclick="removeTopping('bacon')">Less</button>
+              <button class='btn btn-primary' onclick="addTopping('bacon')">More</button>
             </div>
 
           </div>
           <div class="col-6">
             <h3>Pizza</h3>
             <div class='pizzaImage'>
-              <svg class='pizzaSvg' height="200" width="200">
-                <circle cx='100' cy='100' r='100' stroke="brown" stroke-width="3" fill="beige" />
-                
-              </svg>
-              <svg class='toppingSvg' height="200" width="200">
-                <circle cx="40" cy="20" r="5" stroke="black" stroke-width="1" fill="red" />
-                <circle cx="30" cy="30" r="5" stroke="black" stroke-width="1" fill="red" /> 
-              </svg>
+                <div id="toppings">
+                    <svg class='pizzaSvg' height="200" width="200">
+                        <circle cx='100' cy='100' r='100' stroke="brown" stroke-width="3" fill="beige" />
+                    </svg>
+                </div>
+              
+              
             </div>
             
           </div>

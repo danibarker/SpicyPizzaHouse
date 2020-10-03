@@ -4,16 +4,20 @@ html, body {
 h1,h2, h3 {
   text-align: center;  
 }
-.col-6 {
-    text-align: center;
-}
+
 .toppingSvg {
     position: absolute;
     top:0;
     left:0;
 }
-.pizzaSvg {
+.pizzaImage {
+    width: 200px;
+    height: 200px;
+}
+#toppings {
     position: relative;
+}
+.col-6 {
     text-align: center;
 }
 
@@ -62,12 +66,17 @@ a:active {
 
 
 #blankPizza {
-    
     width: 10rem;
 }
 .center {
   text-align: center;
   font-size: large;
+}
+
+#addToCart {
+    position: absolute;
+    bottom: 0;
+    margin-top: 20px;
 }
 
 .bg-pizzared {
