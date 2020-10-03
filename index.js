@@ -18,7 +18,7 @@ function dateSelected() {
     if(appt.value === "" ||
     fname.value === '' ||
     number.value ==='') {
-      alert('Please Select Time, Enter Name or Phone Number')
+      alert('Please Select Time, Enter Name and Phone Number')
     } else {
   timeSelect.textContent = appt.value + ' Hrs';
   fulName.textContent = fname.value + " " + lname.value
