@@ -95,7 +95,9 @@ a:active {
 .hours-times {
   width: 30em;
 }
-
+.row {
+    justify-content:center;
+}
 #hours {
   background-color: #ff9a00	;
 }
