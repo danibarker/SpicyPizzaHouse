@@ -19,7 +19,7 @@ function dateSelected() {
     if(appt.value === "" ||
     fname.value === '' ||
     number.value ==='') {
-      alert('Please Select Time, Enter Name or Phone Number')
+      alert('Please Select Time, Enter Name and Phone Number')
     } else {
  
       window.open("#thanks","_self")

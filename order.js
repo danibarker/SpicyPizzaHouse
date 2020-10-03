@@ -2,14 +2,23 @@ $('html, body').css({
     overflow: 'hidden',
     height: '100%'
 });
+
 $("a").click(function () {
     $("section").each((i, obj) => $(obj).removeClass('currentSection'));
     $($(this).attr('href')).addClass('currentSection')
 
 });
 
-let pepSvg = ''
-
+let orderItem = {
+    item: null,
+    price: 0
+}
+let orderCost = 0;
+let size = 14;
+let cart = [];
+let drinkType;
+let wingFlavor;
+let itemType;
 let pizzaToppings = {
     bacon: {
         quantity: 0,
@@ -102,7 +111,7 @@ function generatePizzaPicture() {
 
 function updateOrder() {
     generatePizzaPicture();
-    let size = $("#pizzasize").val();
+    size = $("#pizzasize").val();
     let orderHtml = `<div class='row justify-content-between'><div class='col lineItem'>${size}" pizza </div><div class='col lineCost'> ${basePrices[size]}</div></div><br />`;
     let toppingsCost=0;
     for (topping in pizzaToppings) {
@@ -114,13 +123,37 @@ function updateOrder() {
 
         }
     }
-    orderHtml += `<hr><div class='row justify-content-between'><div class='col lineItem'>Total </div><div class='col lineCost'> $${(toppingsCost + basePrices[size]).toFixed(2)}</div></div>`
-    orderHtml += "<br /><button id='addToCart' onclick='showMenu()' class='btn btn-primary'>Add to Cart</button>"
+    orderCost = (toppingsCost + basePrices[size]).toFixed(2);
+    orderHtml += `<hr><div class='row justify-content-between'><div class='col lineItem'>Total </div><div class='col lineCost'> $${orderCost}</div></div>`
+    orderHtml += "<br /><button id='addToCart' onclick='addToCart()' class='btn btn-primary'>Add to Cart</button>"
     console.log(orderHtml)
     $("#pizzaCost").html(orderHtml);
     
    
 }
+
+function addToCart() {
+    orderItem.size = size;
+    if (itemType === 'pizza') {
+        orderItem.item = Object.keys(pizzaToppings).map(function (topping) {
+            let item = {
+                toppingType: topping,
+                quantity: pizzaToppings[topping].quantity
+            }
+            return item;
+        })
+    } else if (itemType === 'wings') {
+        orderItem.item = wingFlavor;
+    } else {
+        orderItem.item = drinkType;
+    }
+    
+    orderItem.price = orderCost;
+    cart.push({ ...orderItem });
+    console.log(cart);
+    showMenu();
+}
+
 function showMenu() {
     Object.keys(pizzaToppings).forEach((topping) => pizzaToppings[topping].quantity = 0);
     $('#order').html(`<h2>Order</h2>
@@ -152,6 +185,7 @@ function showMenu() {
           </div>`);
 }
 function showPizza() {
+    itemType = "pizza";
     $('#order').html(`<h2>Order</h2>
         <div class="row">
           <div class="col-3">
