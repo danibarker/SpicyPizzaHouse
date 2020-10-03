@@ -110,7 +110,7 @@ function updateOrder() {
         toppingsCost += quantity;
         let lineMessage = `<div class='row justify-content-between'><div class='col lineItem'>${topping} x ${quantity} </div><div class='col lineCost'> $${quantity}.00</div></div>`;
         if (quantity > 0) {
-            orderHtml += lineMessage + "<br />";
+            orderHtml += lineMessage;
 
         }
     }
