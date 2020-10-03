@@ -98,8 +98,8 @@ section {
 
 .flash-container {
   /* display: flex; */
-  margin: auto;
-  border: 5px solid rgb(51, 41, 41);;
+  margin: 260px auto;
+  border: 5px solid rgb(51, 41, 41);
   border-radius: 10px;
   width: 50vw;
   font-size: 40px;
