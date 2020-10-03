@@ -122,6 +122,7 @@ function updateOrder() {
    
 }
 function showMenu() {
+    Object.keys(pizzaToppings).forEach((topping) => pizzaToppings[topping].quantity = 0);
     $('#order').html(`<h2>Order</h2>
           <div id="card-group" class="row justify-content-center">
               <div class="col-4 center">
