@@ -19,6 +19,7 @@ h1,h2, h3 {
 .pizzaImage {
     width: 200px;
     height: 200px;
+    margin: auto;
 }
 #toppings {
     position: relative;
@@ -121,3 +122,4 @@ a:active {
 .center {
   text-align: center;
 }
+
