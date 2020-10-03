@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/pizza-svgrepo-com.svg">
     <title>Spicy Pizza House!</title>
 </head>
   <body>
@@ -19,7 +20,7 @@
     </section>
     <nav id="home" class="navbar navbar-expand-lg navbar-light bg-pizzared justify-content-between">
       <a href="#splash"class="navbar-brand">
-        <img src="images/pizza-svgrepo-com.svg" width="50px" alt="PizzaLogo">
+        <img src="images/pizza-svgrepo-com.svg" width="50" alt="PizzaLogo">
         Spicy Pizza House
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +47,7 @@
       </div>
     </nav>
 
-      <section id="order" class="container pb-3">
+      <section id="order" class="container-flex pl-5 pr-5 pb-3">
         <h2>Order</h2>
         <div class="row">
           <div class="col-3">
@@ -69,6 +70,11 @@
             </div>
             <div>
              
+              Hot Pepper <br>
+              <button class='btn btn-primary' onclick="removeTopping('hotPepper')">Less</button>
+              <button class='btn btn-primary' onclick="addTopping('hotPepper')">More</button>
+            </div>
+            <div> 
               Pineapple <br>
               <button class='btn btn-primary' onclick="removeTopping('pineapple')">Less</button>
               <button class='btn btn-primary' onclick="addTopping('pineapple')">More</button>
@@ -100,7 +106,7 @@
           </div>
         </div>
       </section>
-      <section id="hours" class="container pb-3" >
+      <section id="hours" class="container-flex pb-3" >
         <h2>Hours</h2>
         <div class="row">
             <div class="col-3">
@@ -123,7 +129,7 @@
             </div>
         </div>
       </section>
-      <section id="reserve" class="container pb-3">
+      <section id="reserve" class="container-flexpb-3">
         <h2>Reserve</h2>
         <div class="container">
         <div class="row">
@@ -131,9 +137,6 @@
                 <label for="date">Date:</label><br />
                 <label for="time">Time:</label>
             </div>
-
-                <!-- </div>
-    <div class="col"> -->
             <div class="col-3">
                 <input type="date" id="myDate" value="2020-09-09">
                 <input type="time" id="appt" name="appt">
@@ -154,24 +157,7 @@
           </div>
         </div>
         </div>
-              <!-- </div>
-    <div class="col"> -->
-
-              
-              <!-- </div>
-    <div class="col"> -->
-
-              
-              <!-- </div>
-    <div class="col" > -->
-
-              
-              <!-- </div>
-    <div class="col" > -->
-              
-              
-          </div>         
-        </div>
+             
         <div class="center">
         <button id="get-date">Make Reservation</button>
         <div id="date-select"></div>
@@ -181,14 +167,14 @@
       
  
       </section>
-      <section id="contact" class="container pb-3">
+      <section id="contact" class="container-flexpb-3">
         <h2>Contact Us</h2>
         <div class="contact-container">
           <div>Phone Number 403 123 4567</div>
           <div ><a href="mailto:info@pizza.com"> info@pizza.com</a></div>
       </div>
       </section>
-      </div>
+      
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
