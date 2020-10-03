@@ -15,7 +15,12 @@
     <section id="splash" class="flash-page">
       <h1 style="color: whitesmoke;background-color: rgb(31, 27, 27);width:800px;margin:auto;">Welcome To Spicy Pizza House</h1>
       <div class="flash-container">      
-      <div ><a href="#order">Click Here to Order</a></div>
+      <div >
+          <a class="btn" href="#order">Online Ordering</a>
+          <a class="btn" href="#reserve">Make a Reservation</a>
+          <a class="btn" href="#contact">Location/Contact Us</a>
+          <a class="btn" href="#hours">Hours</a>
+      </div>
     </div>
     </section>
     <nav id="home" class="navbar navbar-expand-lg navbar-light bg-pizzared justify-content-between">
@@ -49,7 +54,6 @@
         </ul>
       </div>
     </nav>
-
     <section id="order" class="container-flex pl-5 pr-5 pb-3">
         <h2>Order</h2>
         <div id="card-group" class="row justify-content-center">
@@ -157,18 +161,45 @@
       
  
       </section>
-      <section id="contact" class="container-flexpb-3">
+      <section id="contact" class="container-flex pb-3 pl-5 pr-5">
         <h2>Contact Us</h2>
         <div class="contact-container">
-          <div>Phone Number 403 123 4567</div>
-          <div ><a href="mailto:info@pizza.com"> info@pizza.com</a></div>
+            <div class="row">
+                <div class="col center">
+                    Conventiently located at 800 3 St SE, right in Downtown Calgary <br /><br />
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.417366247767!2d-114.05714644966987!3d51.0453808521003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5371700022f327d7%3A0x983cc1ce51764b3d!2s800%203%20St%20SE%2C%20Calgary%2C%20AB%20T2G%200E7!5e0!3m2!1sen!2sca!4v1601759879762!5m2!1sen!2sca" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <div class="col center">
+                    <div id="continfo">
+                        Phone: 403 123 4567<br />
+                        Email:<a href="mailto:info@pizza.com"> info@pizza.com</a>
+                    </div>
+                    <div class="container mt-3">
+                        <form action="action_page.php">
+
+                            <label for="name">Name</label>
+                            <input type="text" id="fname" name="name" placeholder="Your name..">
+
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email" placeholder="Your email..">
+
+                            <textarea id="subject" name="subject" placeholder="Leave us a comment.." style="height:200px; width:100%"></textarea>
+
+                            <input class="btn-sm btn btn-primary"type="submit" value="Submit">
+
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+          
+          
       </div>
       </section>
-    </section>
     <section id="thanks" class="container-flexpb-3 thanks">
-      <h2>Thank you for your Reservation</h2>
+        <h2>Thank you for your Reservation</h2>
      
-      <div class="center">
+        <div class="center">
         <div id="full-name"></div>
         <div id="date-select"></div>
         

@@ -107,7 +107,7 @@ section {
   margin: 260px auto;
   border: 5px solid rgb(51, 41, 41);
   border-radius: 10px;
-  width: 50vw;
+  width: 70vw;
   font-size: 40px;
   color: whitesmoke;
   background-color: rgb(31, 27, 27);
@@ -151,7 +151,9 @@ a.nav-link {
   text-align: center;
   font-size: large;
 }
-
+#contact a {
+    color: #55595c;
+}
 
 
 #addToCart {
