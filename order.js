@@ -2,54 +2,43 @@ let pizzaToppings = {
     bacon: {
         quantity: 0,
         svg: `<svg class="toppingSvg" height="200" width="200">\
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="20" height="10" stroke="black" stroke-width="1" fill="brown" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="20" height="10" stroke="black" stroke-width="1" fill="brown" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="20" height="10" stroke="black" stroke-width="1" fill="brown" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="20" height="10" stroke="black" stroke-width="1" fill="brown" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="20" height="10" stroke="black" stroke-width="1" fill="brown" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="20" height="10" stroke="black" stroke-width="1" fill="brown" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="20" height="10" stroke="black" stroke-width="1" fill="brown" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="20" height="10" stroke="black" stroke-width="1" fill="brown" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="20" height="10" stroke="black" stroke-width="1" fill="brown" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="20" height="10" stroke="black" stroke-width="1" fill="brown" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="20" height="10" stroke="black" stroke-width="1" fill="brown" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="20" height="10" stroke="black" stroke-width="1" fill="brown" /> </svg >`},
+                <rect x="100" y="40" width="20" height="10" stroke="black" stroke-width="1" fill="brown" /> \
+                <rect x="160" y="100" width="20" height="10" stroke="black" stroke-width="1" fill="brown" /> \
+                <rect x="80" y="160" width="20" height="10" stroke="black" stroke-width="1" fill="brown" /> \
+                <rect x="40" y="100" width="20" height="10" stroke="black" stroke-width="1" fill="brown" /> \
+                <rect x="120" y="60" width="20" height="10" stroke="black" stroke-width="1" fill="brown" /> \
+                <rect x="140" y="120" width="20" height="10" stroke="black" stroke-width="1" fill="brown" /> \
+                <rect x="100" y="140" width="20" height="10" stroke="black" stroke-width="1" fill="brown" /> \
+                <rect x="60" y="60" width="20" height="10" stroke="black" stroke-width="1" fill="brown" /> \
+                <rect x="100" y="100" width="20" height="10" stroke="black" stroke-width="1" fill="brown" /> \
+                 </svg >`},
     pineapple: {
         quantity: 0,
-        svg: `<svg class="toppingSvg" height="200" width="200">\
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="15" height="15" stroke="black" stroke-width="1" fill="yellow" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="15" height="15" stroke="black" stroke-width="1" fill="yellow" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="15" height="15" stroke="black" stroke-width="1" fill="yellow" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="15" height="15" stroke="black" stroke-width="1" fill="yellow" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="15" height="15" stroke="black" stroke-width="1" fill="yellow" /> \                
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="15" height="15" stroke="black" stroke-width="1" fill="yellow" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="15" height="15" stroke="black" stroke-width="1" fill="yellow" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="15" height="15" stroke="black" stroke-width="1" fill="yellow" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="15" height="15" stroke="black" stroke-width="1" fill="yellow" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="15" height="15" stroke="black" stroke-width="1" fill="yellow" /> \                
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="15" height="15" stroke="black" stroke-width="1" fill="yellow" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="15" height="15" stroke="black" stroke-width="1" fill="yellow" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="15" height="15" stroke="black" stroke-width="1" fill="yellow" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="15" height="15" stroke="black" stroke-width="1" fill="yellow" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="15" height="15" stroke="black" stroke-width="1" fill="yellow" /> \                
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="15" height="15" stroke="black" stroke-width="1" fill="yellow" /> \
-                <rect x="${40 + Math.random() * 120}" y="${40 + Math.random() * 120}" width="15" height="15" stroke="black" stroke-width="1" fill="yellow" /> </svg >`
+        svg: `<svg id="pineapple" class="toppingSvg" height="200" width="200">\
+                <rect x="100" y="40" width="15" height="15" stroke="orange" stroke-width="1" fill="yellow" /> \
+                <rect x="160" y="100" width="15" height="15" stroke="orange" stroke-width="1" fill="yellow" /> \
+                <rect x="80" y="160" width="15" height="15" stroke="orange" stroke-width="1" fill="yellow" /> \
+                <rect x="40" y="100" width="15" height="15" stroke="orange" stroke-width="1" fill="yellow" /> \
+                <rect x="120" y="60" width="15" height="15" stroke="orange" stroke-width="1" fill="yellow" /> \
+                <rect x="140" y="120" width="15" height="15" stroke="orange" stroke-width="1" fill="yellow" /> \
+                <rect x="100" y="140" width="15" height="15" stroke="orange" stroke-width="1" fill="yellow" /> \
+                <rect x="60" y="60" width="15" height="15" stroke="orange" stroke-width="1" fill="yellow" /> \
+                <rect x="100" y="100" width="15" height="15" stroke="orange" stroke-width="1" fill="yellow" /> \
+                </svg >`
     },
     pepperoni: {
         quantity: 0,
         svg: `<svg class="toppingSvg" height="200" width="200">\
-                <circle cx="${40 + Math.random() * 120}" cy="${40 + Math.random() * 120}" r="10" stroke="black" stroke- width="1" fill = "red" />\
-                <circle cx="${40 + Math.random() * 120}" cy="${40 + Math.random() * 120}" r="10" stroke="black" stroke-width="1" fill="red" />\
-                <circle cx="${40 + Math.random() * 120}" cy="${40 + Math.random() * 120}" r="10" stroke="black" stroke-width="1" fill="red" />\
-                <circle cx="${40 + Math.random() * 120}" cy="${40 + Math.random() * 120}" r="10" stroke="black" stroke- width="1" fill = "red" />\
-                <circle cx="${40 + Math.random() * 120}" cy="${40 + Math.random() * 120}" r="10" stroke="black" stroke-width="1" fill="red" />\
-                <circle cx="${40 + Math.random() * 120}" cy="${40 + Math.random() * 120}" r="10" stroke="black" stroke-width="1" fill="red" />\
-                <circle cx="${40 + Math.random() * 120}" cy="${40 + Math.random() * 120}" r="10" stroke="black" stroke- width="1" fill = "red" />\
-                <circle cx="${40 + Math.random() * 120}" cy="${40 + Math.random() * 120}" r="10" stroke="black" stroke-width="1" fill="red" />\
-                <circle cx="${40 + Math.random() * 120}" cy="${40 + Math.random() * 120}" r="10" stroke="black" stroke-width="1" fill="red" />\
-                <circle cx="${40 + Math.random() * 120}" cy="${40 + Math.random() * 120}" r="10" stroke="black" stroke- width="1" fill = "red" />\
-                <circle cx="${40 + Math.random() * 120}" cy="${40 + Math.random() * 120}" r="10" stroke="black" stroke-width="1" fill="red" />\
-                <circle cx="${40 + Math.random() * 120}" cy="${40 + Math.random() * 120}" r="10" stroke="black" stroke-width="1" fill="red" />\</svg >`},
+                <circle cx="100" cy="40" r="10" stroke="orange" stroke-width="1" fill="red" /> \
+                <circle cx="160" cy="100" r="10" stroke="orange" stroke-width="1" fill="red" /> \
+                <circle cx="80" cy="160" r="10" stroke="orange" stroke-width="1" fill="red" /> \
+                <circle cx="40" cy="100" r="10" stroke="orange" stroke-width="1" fill="red" /> \
+                <circle cx="120" cy="60" r="10" stroke="orange" stroke-width="1" fill="red" /> \
+                <circle cx="140" cy="120" r="10" stroke="orange" stroke-width="1" fill="red" /> \
+                <circle cx="100" cy="140" r="10" stroke="orange" stroke-width="1" fill="red" /> \
+                <circle cx="60" cy="60" r="10" stroke="orange" stroke-width="1" fill="red" /> \
+                <circle cx="100" cy="100" r="10" stroke="orange" stroke-width="1" fill="red" /> \
+                </svg >`},
     
 }
 let basePrices = {
@@ -71,8 +60,8 @@ function removeTopping(toppingName) {
 }
 
 function generatePizzaPicture() {
-    let toppingHtml = '<svg class="pizzaSvg" height="200" width="200">\
-        <circle cx="100" cy="100" r="100" stroke="brown" stroke-width="3" fill="beige" />\
+    let toppingHtml = '<svg class="pizzaSvg" height="210" width="210">\
+        <circle cx="105" cy="105" r="100" stroke="#b5651d" stroke-width="12" fill="beige" />\
         </svg>;'
     for (topping in pizzaToppings) {
         if (pizzaToppings[topping].quantity > 0) {
