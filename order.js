@@ -86,6 +86,22 @@ function generatePizzaPicture() {
 
 function updateOrder() {
     generatePizzaPicture();
+    let size = $("#pizzasize").val();
+    let orderHtml = `${size}" pizza = ${basePrices[size]}<br />`;
+    let toppingsCost=0;
+    for (topping in pizzaToppings) {
+        let quantity = pizzaToppings[topping].quantity;
+        toppingsCost += quantity;
+        let lineMessage = `${topping} x ${quantity} = $${quantity}`;
+        if (quantity > 0) {
+            orderHtml += lineMessage + "<br />";
+
+        }
+    }
+    orderHtml += `Total: ${(toppingsCost + basePrices[size]).toFixed(2)}`
+    orderHtml += "<br /><button id='addToCart' class='btn btn-primary'>Add to Cart</button>"
+    console.log(orderHtml)
+    $("#pizzaCost").html(orderHtml);
     
    
 }

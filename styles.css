@@ -28,6 +28,12 @@ h1,h2, h3 {
   font-size: large;
 }
 
+#addToCart {
+    position: absolute;
+    bottom: 0;
+    margin-top: 20px;
+}
+
 .bg-pizzared {
   background-color: #ff0000 !important;
 }
