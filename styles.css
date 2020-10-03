@@ -26,6 +26,51 @@ h1,h2, h3 {
 .col-6 {
     text-align: center;
 }
+
+.flash-page {
+  background-image: url("https://images.unsplash.com/photo-1590534247854-e97d5e3feef6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60") ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.flash-container {
+  /* display: flex; */
+  margin: auto;
+  border: 5px solid rgb(51, 41, 41);;
+  border-radius: 10px;
+  width: 50vw;
+  font-size: 40px;
+  color: whitesmoke;
+  background-color: rgb(31, 27, 27);
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+/* unvisited link */
+a:link {
+  color:whitesmoke
+}
+
+/* visited link */
+a:visited {
+  color: whitesmoke;
+}
+
+/* mouse over link */
+a:hover {
+  color: whitesmoke
+}
+
+/* selected link */
+a:active {
+  color: whitesmoke;
+}
+
+
 #blankPizza {
     width: 10rem;
 }
