@@ -86,7 +86,13 @@ section {
     opacity: 1;
 }
 
-
+.card {
+    margin: auto;
+    width: 75%;
+}
+#card-group {
+    margin-top: 5rem;
+}
 .flash-page {
   opacity:1;
   background-image: url("https://images.unsplash.com/photo-1590534247854-e97d5e3feef6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60") ;

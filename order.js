@@ -115,9 +115,97 @@ function updateOrder() {
         }
     }
     orderHtml += `<hr><div class='row justify-content-between'><div class='col lineItem'>Total </div><div class='col lineCost'> $${(toppingsCost + basePrices[size]).toFixed(2)}</div></div>`
-    orderHtml += "<br /><button id='addToCart' class='btn btn-primary'>Add to Cart</button>"
+    orderHtml += "<br /><button id='addToCart' onclick='showMenu()' class='btn btn-primary'>Add to Cart</button>"
     console.log(orderHtml)
     $("#pizzaCost").html(orderHtml);
     
    
+}
+function showMenu() {
+    $('#order').html(`<h2>Order</h2>
+          <div id="card-group" class="row justify-content-center">
+              <div class="col-4 center">
+                  <div onclick="showPizza()" class="card">
+                      <img class="card-img-top" src="images/pizza-svgrepo-com.svg" height="200px"alt="Card image cap">
+                      <div class="card-body">
+                          <h3 class="card-text">Pizza</h3>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-4">
+                  <div onclick="alert('coming soon')" class="card">
+                      <img class="card-img-top" src="images/chicken.png" height="200px" alt="Card image cap">
+                      <div class="card-body">
+                          <h3 class="card-text">Wings</h3>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-4">
+                  <div onclick="alert('coming soon')" class="card">
+                      <img class="card-img-top m-auto" src="images/drink.png" height="200px"alt="Card image cap">
+                      <div class="card-body">
+                          <h3 class="card-text">Drinks</h3>
+                      </div>
+                  </div>
+              </div>
+          </div>`);
+}
+function showPizza() {
+    $('#order').html(`<h2>Order</h2>
+        <div class="row">
+          <div class="col-3">
+            <h3>Options</h3>
+            <h4>Size</h4>
+            <label for="pizzasize">Choose a size:</label>
+
+            <select onchange="updateOrder()" id="pizzasize">
+              <option value=14>14"</option>
+              <option value=16>16"</option>
+              <option value=18>18"</option>
+              <option value=20>20"</option>
+            </select>
+            <h4>Toppings</h4>
+            <div>
+             
+              Pepperoni <br>
+              <button class='btn btn-primary btn-sm' onclick="removeTopping('pepperoni')">Less</button>
+              <button class='btn btn-primary btn-sm' onclick="addTopping('pepperoni')">More</button>
+            </div>
+            <div>
+             
+              Hot Pepper <br>
+              <button class='btn btn-primary btn-sm' onclick="removeTopping('hotPepper')">Less</button>
+              <button class='btn btn-primary btn-sm' onclick="addTopping('hotPepper')">More</button>
+            </div>
+            <div> 
+              Pineapple <br>
+              <button class='btn btn-primary btn-sm' onclick="removeTopping('pineapple')">Less</button>
+              <button class='btn btn-primary btn-sm' onclick="addTopping('pineapple')">More</button>
+            </div>
+            <div>
+             
+              Bacon <br>
+              <button class='btn btn-primary btn-sm' onclick="removeTopping('bacon')">Less</button>
+              <button class='btn btn-primary btn-sm' onclick="addTopping('bacon')">More</button>
+            </div>
+
+          </div>
+          <div class="col-6">
+            <h3>Pizza</h3>
+            <div class='pizzaImage'>
+                <div id="toppings">
+                    <svg class="pizzaSvg" height="210" width="210">
+                        <circle cx="105" cy="105" r="100" stroke="#b5651d" stroke-width="12" fill="beige" />
+                    </svg>
+                </div>
+              
+              
+            </div>
+            
+          </div>
+          <div class="col-3">
+            <h3>Make it!</h3>
+            <div id='pizzaCost'></div>
+          </div>
+        </div>`);
 }
