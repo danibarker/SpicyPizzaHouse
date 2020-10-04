@@ -88,6 +88,12 @@ let wingbasePrices = {
     18: 20.99,
     30: 24.99
 }
+let drinkBasePrices = {
+    '355ml can': 1.59,
+    '4 cans': 2.88,
+    '2L bottle': 4.25
+
+}
 function addTopping(toppingName) {
     pizzaToppings[toppingName].quantity++
     updateOrder();
@@ -138,8 +144,16 @@ function updateOrder() {
         size = $("#wingQuantity").val();
         wingFlavor = $("#wingFlavor").val();
         let orderHtml = `<div class='row justify-content-between'><div class='col lineItem'>${size} wings </div><div class='col lineCost'> ${wingbasePrices[size]}</div></div><br />`;
-        
+
         orderCost = (wingbasePrices[size]).toFixed(2);
+        orderHtml += `<hr><div class='row justify-content-between'><div class='col lineItem'>Total </div><div class='col lineCost'> $${orderCost}</div></div>`
+        orderHtml += "<br /><button id='addToCart' onclick='addToCart()' class='btn btn-primary'>Add to Cart</button>"
+        $("#pizzaCost").html(orderHtml);
+    } else {
+        size = $('#drinkSize').val();
+        drinkType = $('#drinkType').val();
+        let orderHtml = `<div class='row justify-content-between'><div class='col lineItem'>${size} </div><div class='col lineCost'> ${drinkBasePrices[size]}</div></div><br />`;
+        orderCost = (drinkBasePrices[size]).toFixed(2);
         orderHtml += `<hr><div class='row justify-content-between'><div class='col lineItem'>Total </div><div class='col lineCost'> $${orderCost}</div></div>`
         orderHtml += "<br /><button id='addToCart' onclick='addToCart()' class='btn btn-primary'>Add to Cart</button>"
         $("#pizzaCost").html(orderHtml);
@@ -191,7 +205,7 @@ function showMenu() {
                   </div>
               </div>
               <div class="col-4">
-                  <div onclick="showDrinks" class="card">
+                  <div onclick="showDrinks()" class="card">
                       <img class="card-img-top m-auto" src="images/drink.png" height="200px"alt="Card image cap">
                       <div class="card-body">
                           <h3 class="card-text">Drinks</h3>
@@ -296,6 +310,39 @@ function showWings() {
     updateOrder();
 }
 
+function showDrinks() {
+    itemType = "drinks";
+    $('#order').html(`<h2>Order</h2>
+        <div class="row">
+          <div class="col-5">
+            <h3>Options</h3>
+            <h4>Size</h4>
+            <label for="drinkSize">Choose a size:</label>
+
+            <select onchange="updateOrder()" id="drinkSize">
+              <option value='355ml can'>355ml can</option>
+              <option value='4 cans'>4 cans</option>
+              <option value='2L bottle'>2L bottle</option>
+            </select>
+            <h4>Soda type</h4>
+            <label for="drinkType">Choose a soda:</label>
+
+            <select onchange="updateOrder()" id="drinkType">
+              <option value='Cola'>Cola</option>
+              <option value='Iced Tea'>Iced Tea</option>
+              <option value='Diet Cola'>Diet Cola</option>
+              <option value='Root Beer'>Root Beer</option>
+            </select>
+
+          </div>
+          <div class="col-5">
+            <h3>Make it!</h3>
+            <div id='pizzaCost'></div>
+          </div>
+        </div>`);
+    updateOrder();
+}
+
 $("#cartlink").click(function () {
     let total = cart.reduce(function (subtotal, itemPrice) {
         subtotal += +itemPrice.price
@@ -304,14 +351,16 @@ $("#cartlink").click(function () {
     total *= 1.05;
     let cartHtml = '<h2>Cart</h2><div class="container"><div class="row"><div class="col subtotal"><h3>Your Order</h3>';
     for (item of cart) {
-        if (typeof item.item=='object') {
+        if (typeof item.item == 'object') {
             let itemToppings = item.item
-                .filter((topping) => topping.quantity>0)
+                .filter((topping) => topping.quantity > 0)
                 .reduce((display, curTopping) => display += `${curTopping.toppingType} x ${curTopping.quantity}, `, '');
             cartHtml += `<div>${item.size}" Pizza - ${item.price}</div>${itemToppings}<br /><br />`
-        } else {
+        } else if (!isNaN(item.size)) {
 
             cartHtml += `<div>${item.size} ${item.item} wings - ${item.price}</div><br>`;
+        } else {
+            cartHtml += `<div>${item.size} ${item.item} - ${item.price}</div><br>`;
         }
     }
     cartHtml += `<div>Delivery cost - $3.00</div><br /><div>Total - $${total.toFixed(2)}</div>`
