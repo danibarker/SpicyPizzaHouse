@@ -200,7 +200,7 @@ a.nav-link {
   font-size: 80px;
 }
 
-subtotal {
-    overflow-y:auto;
+.subtotal {
+    margin-bottom: 3rem;
 }
 
