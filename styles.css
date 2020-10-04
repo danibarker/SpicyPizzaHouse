@@ -124,7 +124,7 @@ section {
 }
 .flash-container {
   /* display: flex; */
-  margin: 260px auto;
+  margin: 20% auto 0 auto;
   border: 5px solid rgb(51, 41, 41);
   border-radius: 10px;
   width: 70vw;
