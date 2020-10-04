@@ -279,7 +279,7 @@ $("#cartlink").click(function () {
                         <input type="text" id="cartaddress" name="cartaddress" placeholder="Your address..">
                         <br />
                         <label for="cartphone">Phone number</label><br />
-                        <input type="text" id="cartphone" name="cartphone">
+                        <input type="text" id="cartphone" name="cartphone"><br />
                         <label for="delivery">Detailed delivery instructions</label><br />
                         <textarea id="delivery" name="delivery" placeholder="eg. Use side door, door bell out of order" style="height:50px; width:100%"></textarea>
 
