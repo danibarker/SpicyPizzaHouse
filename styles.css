@@ -233,8 +233,8 @@ a.nav-link {
     transition: 0.3s;
 }
 
-    /* When moving the mouse over the close button */
-    .closebtn:hover {
-        color: black;
-    }
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
 

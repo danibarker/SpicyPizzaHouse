@@ -84,10 +84,11 @@ function generatePizzaPicture() {
 }
 
 function updateOrder() {
+    let orderHtml = '';
     if (itemType === 'pizza') {
         generatePizzaPicture();
         size = $("#pizzasize").val();
-        let orderHtml = `<div class='row justify-content-between'><div class='col lineItem'>${size}" pizza </div><div class='col lineCost'> ${basePrices[size]}</div></div><br />`;
+        orderHtml = `<div class='row justify-content-between'><div class='col lineItem'>${size}" pizza </div><div class='col lineCost'> ${basePrices[size]}</div></div><br />`;
         let toppingsCost = 0;
         for (topping in pizzaToppings) {
             let quantity = pizzaToppings[topping].quantity;
@@ -99,27 +100,24 @@ function updateOrder() {
             }
         }
         orderCost = (toppingsCost + basePrices[size]).toFixed(2);
-        orderHtml += `<hr><div class='row justify-content-between'><div class='col lineItem'>Total </div><div class='col lineCost'> $${orderCost}</div></div>`
-        orderHtml += "<br /><button id='addToCart' onclick='confirmation()' class='btn btn-primary'>Add to Cart</button>"
-        $("#pizzaCost").html(orderHtml);
+        
     } else if (itemType === 'wings') {
         size = $("#wingQuantity").val();
         wingFlavor = $("#wingFlavor").val();
-        let orderHtml = `<div class='row justify-content-between'><div class='col lineItem'>${size} wings </div><div class='col lineCost'> ${wingbasePrices[size]}</div></div>`;
+        orderHtml = `<div class='row justify-content-between'><div class='col lineItem'>${size} wings </div><div class='col lineCost'> ${wingbasePrices[size]}</div></div>`;
 
         orderCost = (wingbasePrices[size]).toFixed(2);
-        orderHtml += `<div class='row mt-2 justify-content-between border-top border-dark'><div class='col lineItem'>Total </div><div class='col lineCost'> $${orderCost}</div></div>`
-        orderHtml += "<div class='row pt-3 justify-content-between' ><button id='addToCart' onclick='addToCart()' class='btn btn-primary'>Add to Cart</button></div>"
-        $("#pizzaCost").html(orderHtml);
+        
     } else {
         size = $('#drinkSize').val();
         drinkType = $('#drinkType').val();
-        let orderHtml = `<div class='row justify-content-between'><div class='col lineItem'>${size} </div><div class='col lineCost'> ${drinkBasePrices[size]}</div></div><br />`;
+        orderHtml = `<div class='row justify-content-between'><div class='col lineItem'>${size} </div><div class='col lineCost'> ${drinkBasePrices[size]}</div></div>`;
         orderCost = (drinkBasePrices[size]).toFixed(2);
-        orderHtml += `<hr><div class='row justify-content-between'><div class='col lineItem'>Total </div><div class='col lineCost'> $${orderCost}</div></div>`
-        orderHtml += "<br /><button id='addToCart' onclick='confirmation()' class='btn btn-primary'>Add to Cart</button>"
-        $("#pizzaCost").html(orderHtml);
+        
     }
+    orderHtml += `<div class='row mt-2 justify-content-between border-top border-dark'><div class='col lineItem'>Total </div><div class='col lineCost'> $${orderCost}</div></div>`
+    orderHtml += "<div class='row pt-3 justify-content-between' ><button id='addToCart' onclick='confirmation()' class='btn btn-primary'>Add to Cart</button></div>"
+    $("#pizzaCost").html(orderHtml);
     
     
    
