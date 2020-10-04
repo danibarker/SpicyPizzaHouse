@@ -108,7 +108,15 @@ section {
 
 .card {
     margin: auto;
+    padding: 15px;
     width: 75%;
+    border-color:black;
+    border-width:8px;
+    border-radius:20%;
+    background-color:darkorange;
+}
+.card-text {
+    font-size: 2.6vw;
 }
 #card-group {
     margin-top: 5rem;
