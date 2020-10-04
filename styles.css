@@ -50,6 +50,11 @@ h2, h3, #reserveText {
     font-weight: 700;
 }
 
+#goBack {
+  float:left;
+  background-color: #ff9a00	;
+}
+
 .toppingSvg {
     position: absolute;
     top:0;

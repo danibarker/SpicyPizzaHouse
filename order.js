@@ -22,10 +22,12 @@ let itemType;
 let pizzaToppings = {
     bacon: {
         quantity: 0,
-        svg: toppingImages.bacon},
+        svg: toppingImages.bacon
+    },
     pepperoni: {
         quantity: 0,
-        svg: toppingImages.pepperoni},
+        svg: toppingImages.pepperoni
+    },
     pineapple: {
         quantity: 0,
         svg: toppingImages.pineapple
@@ -55,14 +57,14 @@ let drinkBasePrices = {
 
 }
 function addTopping(toppingName) {
-    pizzaToppings[toppingName].quantity++
+    pizzaToppings[toppingName].quantity++;
     updateOrder();
 }
 
 function removeTopping(toppingName) {
-    pizzaToppings[toppingName].quantity--
+    pizzaToppings[toppingName].quantity--;
     if (pizzaToppings[toppingName].quantity < 0) {
-        pizzaToppings[toppingName].quantity = 0
+        pizzaToppings[toppingName].quantity = 0;
     }
     updateOrder();
 }
@@ -103,11 +105,11 @@ function updateOrder() {
     } else if (itemType === 'wings') {
         size = $("#wingQuantity").val();
         wingFlavor = $("#wingFlavor").val();
-        let orderHtml = `<div class='row justify-content-between'><div class='col lineItem'>${size} wings </div><div class='col lineCost'> ${wingbasePrices[size]}</div></div><br />`;
+        let orderHtml = `<div class='row justify-content-between'><div class='col lineItem'>${size} wings </div><div class='col lineCost'> ${wingbasePrices[size]}</div></div>`;
 
         orderCost = (wingbasePrices[size]).toFixed(2);
-        orderHtml += `<hr><div class='row justify-content-between'><div class='col lineItem'>Total </div><div class='col lineCost'> $${orderCost}</div></div>`
-        orderHtml += "<br /><button id='addToCart' onclick='addToCart()' class='btn btn-primary'>Add to Cart</button>"
+        orderHtml += `<div class='row mt-2 justify-content-between border-top border-dark'><div class='col lineItem'>Total </div><div class='col lineCost'> $${orderCost}</div></div>`
+        orderHtml += "<div class='row pt-3 justify-content-between' ><button id='addToCart' onclick='addToCart()' class='btn btn-primary'>Add to Cart</button></div>"
         $("#pizzaCost").html(orderHtml);
     } else {
         size = $('#drinkSize').val();
@@ -176,7 +178,8 @@ function showMenu() {
 }
 function showPizza() {
     itemType = "pizza";
-    $('#order').html(`<h2>Order</h2>
+    $('#order').html(`<button id='goBack' onclick='showMenu()' class='btn btn-secondary'>Back to Menu</button>
+        <h2>Make a Pizza</h2>
         <div class="row">
           <div class="col-3">
             <h3>Options</h3>
@@ -238,7 +241,8 @@ function showPizza() {
 
 function showWings() {
     itemType = "wings";
-    $('#order').html(`<h2>Order</h2>
+    $('#order').html(`<button id='goBack' onclick='showMenu()' class='btn btn-secondary'>Back to Menu</button>
+        <h2>Get Wings</h2>
         <div class="row">
           <div class="col-5">
             <h3>Options</h3>
@@ -263,7 +267,7 @@ function showWings() {
 
           </div>
           <div class="col-5">
-            <h3>Make it!</h3>
+            <h3>Make em!</h3>
             <div id='pizzaCost'></div>
           </div>
         </div>`);
@@ -272,7 +276,8 @@ function showWings() {
 
 function showDrinks() {
     itemType = "drinks";
-    $('#order').html(`<h2>Order</h2>
+    $('#order').html(`<button id='goBack' onclick='showMenu()' class='btn btn-secondary'>Back to Menu</button>
+        <h2>Get Drinks</h2>
         <div class="row">
           <div class="col-5">
             <h3>Options</h3>
@@ -296,7 +301,7 @@ function showDrinks() {
 
           </div>
           <div class="col-5">
-            <h3>Make it!</h3>
+            <h3>Get em!</h3>
             <div id='pizzaCost'></div>
           </div>
         </div>`);
