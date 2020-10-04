@@ -139,7 +139,7 @@ function updateOrder() {
         }
         orderCost = (toppingsCost + basePrices[size]).toFixed(2);
         orderHtml += `<hr><div class='row justify-content-between'><div class='col lineItem'>Total </div><div class='col lineCost'> $${orderCost}</div></div>`
-        orderHtml += "<br /><button id='addToCart' onclick='addToCart()' class='btn btn-primary'>Add to Cart</button>"
+        orderHtml += "<br /><button id='addToCart' onclick='confirmation()' class='btn btn-primary'>Add to Cart</button>"
         $("#pizzaCost").html(orderHtml);
     } else if (itemType === 'wings') {
         size = $("#wingQuantity").val();
@@ -148,7 +148,7 @@ function updateOrder() {
 
         orderCost = (wingbasePrices[size]).toFixed(2);
         orderHtml += `<hr><div class='row justify-content-between'><div class='col lineItem'>Total </div><div class='col lineCost'> $${orderCost}</div></div>`
-        orderHtml += "<br /><button id='addToCart' onclick='addToCart()' class='btn btn-primary'>Add to Cart</button>"
+        orderHtml += "<br /><button id='addToCart' onclick='confirmation()' class='btn btn-primary'>Add to Cart</button>"
         $("#pizzaCost").html(orderHtml);
     } else {
         size = $('#drinkSize').val();
@@ -156,14 +156,22 @@ function updateOrder() {
         let orderHtml = `<div class='row justify-content-between'><div class='col lineItem'>${size} </div><div class='col lineCost'> ${drinkBasePrices[size]}</div></div><br />`;
         orderCost = (drinkBasePrices[size]).toFixed(2);
         orderHtml += `<hr><div class='row justify-content-between'><div class='col lineItem'>Total </div><div class='col lineCost'> $${orderCost}</div></div>`
-        orderHtml += "<br /><button id='addToCart' onclick='addToCart()' class='btn btn-primary'>Add to Cart</button>"
+        orderHtml += "<br /><button id='addToCart' onclick='confirmation()' class='btn btn-primary'>Add to Cart</button>"
         $("#pizzaCost").html(orderHtml);
     }
     
     
    
 }
-
+function confirmation() {
+    let successHtml = 
+        `<div class="alert success" onclick="addToCart()">
+            <span class="closebtn" >Continue</span>
+            Success! Item added to cart<br />
+        </div>`;
+    $('#pizzaCost').append(successHtml);
+    
+}
 function addToCart() {
     orderItem.size = size;
     if (itemType === 'pizza') {
@@ -188,32 +196,32 @@ function addToCart() {
 function showMenu() {
     Object.keys(pizzaToppings).forEach((topping) => pizzaToppings[topping].quantity = 0);
     $('#order').html(`<h2>Order</h2>
-          <div id="card-group" class="row justify-content-center">
-              <div class="col-4 center">
-                  <div onclick="showPizza()" class="card">
-                      <img class="card-img-top" src="images/pizza-svgrepo-com.svg" height="200px"alt="Card image cap">
-                      <div class="card-body">
-                          <h3 class="card-text">Pizza</h3>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-4">
-                  <div onclick="showWings()" class="card">
-                      <img class="card-img-top" src="images/chicken.png" height="200px" alt="Card image cap">
-                      <div class="card-body">
-                          <h3 class="card-text">Wings</h3>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-4">
-                  <div onclick="showDrinks()" class="card">
-                      <img class="card-img-top m-auto" src="images/drink.png" height="200px"alt="Card image cap">
-                      <div class="card-body">
-                          <h3 class="card-text">Drinks</h3>
-                      </div>
-                  </div>
-              </div>
-          </div>`);
+        <div id="card-group" class="row justify-content-center">
+            <div class="col-lg-4 center">
+                <div onclick="showPizza()" class="card">
+                    <img class="card-img-top" src="images/pizza-svgrepo-com.svg" height="200px" alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-text">Pizza</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div onclick="showWings()" class="card">
+                    <img class="card-img-top" src="images/chicken.png" height="200px" alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-text">Wings</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div onclick="showDrinks()" class="card">
+                    <img class="card-img-top m-auto" src="images/drink.png" height="200px" alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-text">Drinks</h3>
+                    </div>
+                </div>
+            </div>
+        </div>`);
 }
 function showPizza() {
     itemType = "pizza";
