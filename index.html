@@ -49,7 +49,7 @@
             <a class="nav-link" href="#contact">Contact Us</a>
           </li>
           <li>
-            <a class="nav-link"><img width="20px" src="images/cart.png"/></a>
+            <a id="cartlink" class="nav-link" href="#cart"><img width="20px" src="images/cart.png"/></a>
           </li>
         </ul>
       </div>
@@ -83,7 +83,7 @@
             </div>
         </div>
     </section>
-      <section id="hours" class="container-flex pb-3" >
+    <section id="hours" class="container-flex pb-3" >
         <h2>Hours of Operation <br /><span class="subtitle">Come and visit us!</span></h2>
         <div class="row justify-content-center">
             <div class="col-8">
@@ -124,8 +124,8 @@
             </div>
         </div>
         
-      </section>
-      <section id="reserve" class="container-flexpb-3">
+        </section>
+    <section id="reserve" class="container-flex pb-3">
         <h2>Reserve</h2>
         <div class="container">
         <div class="row">
@@ -137,66 +137,66 @@
                 <input type="date" id="myDate" class="min-today" placeholder="yyyy-mm-dd">
                 <input type="time" id="appt" name="appt" class="time-now" placeholder="hh:mm ss">
             </div>
-          <div class="col-3">
-              <label for="fname">First name:</label><br />
-              <label for="lname">Last name:</label><br />
-              <label for="number">Phone number:</label><br />
-              <label for="email">Customer email:</label><br />
-              <label for="guest"># Guest(s):</label>
-          </div>
-          <div class="col-3">
-              <input type="text" id="fname" name="fname">
-              <input type="text" id="lname" name="lname">
-              <input type="text" id="number" name="number">
-              <input type="text" id="email" name="email">
-              <input type="text" id="guest" name="guest">
-          </div>
+            <div class="col-3">
+                <label for="fname">First name:</label><br />
+                <label for="lname">Last name:</label><br />
+                <label for="number">Phone number:</label><br />
+                <label for="email">Customer email:</label><br />
+                <label for="guest"># Guest(s):</label>
+            </div>
+            <div class="col-3">
+                <input type="text" id="fname" name="fname">
+                <input type="text" id="lname" name="lname">
+                <input type="text" id="number" name="number">
+                <input type="text" id="email" name="email">
+                <input type="text" id="guest" name="guest">
+            </div>
         </div>
         </div>
              
         <div class="center">
-          <button id="get-date"> Make Reservation</button>
+            <button id="get-date"> Make Reservation</button>
 
-      </div>
+        </div>
       
  
-      </section>
-      <section id="contact" class="container-flex pb-3 pl-5 pr-5">
-        <h2>Contact Us</h2>
-        <div class="contact-container">
-            <div class="row">
-                <div class="col center">
-                    Conventiently located at 800 3 St SE, right in Downtown Calgary <br /><br />
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.417366247767!2d-114.05714644966987!3d51.0453808521003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5371700022f327d7%3A0x983cc1ce51764b3d!2s800%203%20St%20SE%2C%20Calgary%2C%20AB%20T2G%200E7!5e0!3m2!1sen!2sca!4v1601759879762!5m2!1sen!2sca" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                </div>
-                <div class="col center">
-                    <div id="continfo">
-                        Phone: 403 123 4567<br />
-                        Email:<a href="mailto:info@pizza.com"> info@pizza.com</a>
-                    </div>
-                    <div class="container mt-3">
-                        <form action="action_page.php">
-
-                            <label for="name">Name</label>
-                            <input type="text" id="fname" name="name" placeholder="Your name..">
-
-                            <label for="email">Email</label>
-                            <input type="text" id="email" name="email" placeholder="Your email..">
-
-                            <textarea id="subject" name="subject" placeholder="Leave us a comment.." style="height:200px; width:100%"></textarea>
-
-                            <input class="btn-sm btn btn-primary"type="submit" value="Submit">
-
-                        </form>
-                    </div>
-                </div>
-                
+    </section>
+    <section id="contact" class="container-flex pb-3 pl-5 pr-5">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+        <div class="row">
+            <div class="col center">
+                Conventiently located at 800 3 St SE, right in Downtown Calgary <br /><br />
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.417366247767!2d-114.05714644966987!3d51.0453808521003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5371700022f327d7%3A0x983cc1ce51764b3d!2s800%203%20St%20SE%2C%20Calgary%2C%20AB%20T2G%200E7!5e0!3m2!1sen!2sca!4v1601759879762!5m2!1sen!2sca" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
+            <div class="col center">
+                <div id="continfo">
+                    Phone: 403 123 4567<br />
+                    Email:<a href="mailto:info@pizza.com"> info@pizza.com</a>
+                </div>
+                <div class="container mt-3">
+                    <form action="action_page.php">
+
+                        <label for="name">Name</label>
+                        <input type="text" id="fname" name="name" placeholder="Your name..">
+
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" placeholder="Your email..">
+
+                        <textarea id="subject" name="subject" placeholder="Leave us a comment.." style="height:200px; width:100%"></textarea>
+
+                        <input class="btn-sm btn btn-primary"type="submit" value="Submit">
+
+                    </form>
+                </div>
+            </div>
+                
+        </div>
           
           
-      </div>
-      </section>
-    <section id="thanks" class="container-flexpb-3 thanks">
+    </div>
+    </section>
+    <section id="thanks" class="container-flex pb-3 thanks">
         <h2>Thank you for your Reservation</h2>
      
         <div class="center">
@@ -206,7 +206,12 @@
         
     </div>
     </section>
-      
+    <section id="cart" class="container-flex pb-3">
+        <h2>Cart</h2>
+        <div class="container">
+
+        </div>
+    </section>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

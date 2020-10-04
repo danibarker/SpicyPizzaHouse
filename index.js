@@ -22,8 +22,10 @@ function dateSelected() {
       alert('Please Select Time, Enter Name and Phone Number')
     } else {
  
-      window.open("#thanks","_self")
-      fulName.textContent = `Thank you ${fname.value} for your reservation`
+        window.open("#thanks", "_self")
+        $('#reserve').removeClass('currentSection')
+        $('#thanks').addClass('currentSection')
+      fulName.textContent = `Thank you, ${fname.value}, for your reservation`
       dateSelect.textContent = ` See you on ${date.value} at ${appt.value} Hrs` 
       
     

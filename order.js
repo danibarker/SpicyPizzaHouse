@@ -245,3 +245,48 @@ function showPizza() {
         </div>`);
     updateOrder();
 }
+
+$("#cartlink").click(function () {
+    let total = cart.reduce(function (subtotal, itemPrice) {
+        subtotal += +itemPrice.price
+        console.log("itemPrice",itemPrice)
+        console.log(typeof itemPrice.price)
+        return subtotal;
+    }, 3);
+    total *= 1.05;
+    let cartHtml = '<h2>Cart</h2><div class="container"><div class="row"><div class="col subtotal"><h3>Your Order</h3>';
+    for (item of cart) {
+        console.log(typeof item)
+        if (typeof item.item == "object") {
+            let itemToppings = item.item
+                .filter((topping) => topping.quantity>0)
+                .reduce((display, curTopping) => display += `${curTopping.toppingType} x ${curTopping.quantity}, `, '');
+            console.log(itemToppings)
+            cartHtml += `<div>${item.size}" Pizza - ${item.price}</div>${itemToppings}<br /><br />`
+        } else {
+
+            cartHtml += `<div>${item}</div><br>`;
+        }
+    }
+    cartHtml += `<div>Delivery cost - $3.00</div><br /><div>Total - $${total.toFixed(2)}</div>`
+    cartHtml += '</div><div class="col"><h3>Delivery Information</h3>' +`<div class="container mt-3">
+                    <form action="action_page.php">
+
+                        <label for="cartname">Name</label><br />
+                        <input type="text" id="cartname" name="cartname" placeholder="Your name..">
+                        <br />
+                        <label for="address">Address</label><br />
+                        <input type="text" id="cartaddress" name="cartaddress" placeholder="Your address..">
+                        <br />
+                        <label for="cartphone">Phone number</label><br />
+                        <input type="text" id="cartphone" name="cartphone">
+                        <label for="delivery">Detailed delivery instructions</label><br />
+                        <textarea id="delivery" name="delivery" placeholder="eg. Use side door, door bell out of order" style="height:50px; width:100%"></textarea>
+
+                        <input class="btn-sm btn btn-primary"type="submit" value="Submit">
+
+                    </form>
+                </div></div></div>`
+    $('#cart').html(cartHtml);
+});
+
