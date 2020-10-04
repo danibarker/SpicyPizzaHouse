@@ -2,11 +2,12 @@ $('html, body').css({
     overflow: 'hidden',
     height: '100%'
 });
-
-$("a").click(function () {
+$('a').click( function () {
+    $('.navbar-collapse').collapse('hide');
     $("section").each((i, obj) => $(obj).removeClass('currentSection'));
     $($(this).attr('href')).addClass('currentSection')
 });
+
 
 let orderItem = {
     item: null,
