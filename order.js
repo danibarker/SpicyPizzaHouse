@@ -371,7 +371,7 @@ $("#cartlink").click(function () {
                         <input type="text" id="cartname" name="cartname" placeholder="Your name..">
                         <br />
                         <label for="address">Address</label><br />
-                        <input type="text" id="cartaddress" name="cartaddress" placeholder="Your address..">
+                        <input type="text" id="cartaddress" name="cartaddress" width="400" placeholder="Your address.." style="width: 450px;">
                         <br />
                         <label for="cartphone">Phone number</label><br />
                         <input type="text" id="cartphone" name="cartphone"><br />
