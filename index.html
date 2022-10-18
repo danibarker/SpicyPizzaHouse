@@ -1,224 +1,320 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/pizza-svgrepo-com.svg">
-    <title>Spicy Pizza House!</title>
-</head>
-  <body>
-    <section id="splash" class="flash-page">
-      <h1 style="color: whitesmoke;background-color: rgb(31, 27, 27);width:800px;margin:auto;">Welcome To Spicy Pizza House</h1>
-      <div class="flash-container">      
-      <div >
-          <a class="btn" href="#order">Online Ordering</a>
-          <a class="btn" href="#reserve">Make a Reservation</a>
-          <a class="btn" href="#contact">Location/Contact Us</a>
-          <a class="btn" href="#hours">Hours</a>
-      </div>
-    </div>
-    </section>
-    <nav id="home" class="navbar navbar-expand-lg navbar-light bg-pizzared justify-content-between">
-      <a href="#splash"class="navbar-brand">
-        <img src="images/pizza-svgrepo-com.svg" width="50" alt="PizzaLogo">
-        Spicy Pizza House
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>      
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="navbar-nav mr-auto">
-
-        </div>
-        <ul class="navbar-nav flex-row ml-md-auto d-md-flex">
-          <li class="nav-item">
-            <a class="nav-link" href="#order">Order</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#hours">Hours</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#reserve">Reserve</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact Us</a>
-          </li>
-          <li>
-            <a id="cartlink" class="nav-link" href="#cart"><img width="20px" src="images/cart.png"/></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <section id="order" class="container-flex pl-5 pr-5 pb-3">
-        <h2>Order</h2>
-        <div id="card-group" class="row justify-content-center">
-            <div class="col-lg-4 center">
-                <div onclick="showPizza()" class="card">
-                    <img class="card-img-top" src="images/pizza-svgrepo-com.svg" height="200px" alt="Card image cap">
-                    <div class="card-body">
-                        <h3 class="card-text">Pizza</h3>
-                    </div>
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://bootswatch.com/4/lux/bootstrap.min.css"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="icon" href="images/pizza-svgrepo-com.svg" />
+        <title>Spicy Pizza House!</title>
+    </head>
+    <body>
+        <section id="splash" class="flash-page">
+            <h1
+                style="
+                    color: whitesmoke;
+                    background-color: rgb(31, 27, 27);
+                    width: 800px;
+                    margin: auto;
+                "
+            >
+                Welcome To Spicy Pizza House
+            </h1>
+            <div class="flash-container">
+                <div>
+                    <a class="btn" href="#order">Online Ordering</a>
+                    <a class="btn" href="#reserve">Make a Reservation</a>
+                    <a class="btn" href="#contact">Location/Contact Us</a>
+                    <a class="btn" href="#hours">Hours</a>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div onclick="showWings()" class="card">
-                    <img class="card-img-top" src="images/chicken.png" height="200px" alt="Card image cap">
-                    <div class="card-body">
-                        <h3 class="card-text">Wings</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div onclick="showDrinks()" class="card">
-                    <img class="card-img-top m-auto" src="images/drink.png" height="200px" alt="Card image cap">
-                    <div class="card-body">
-                        <h3 class="card-text">Drinks</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="hours" class="container-flex pb-3" >
-        <h2>Hours of Operation <br /><span class="subtitle">Come and visit us!</span></h2>
-        <div class="row justify-content-center">
-            <div class="col-8">
-                <table class="table table-dark table-bordered table-hover table-sm table-striped">
-
-                    <tbody>
-                        <tr>
-                            <th scope="row">Monday</th>
-                            <td>10AM-Midnight</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Tuesday</th>
-                            <td>10AM-Midnight</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Wednesday</th>
-                            <td>10AM-Midnight</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Thursday</th>
-                            <td>10AM-Midnight</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Friday</th>
-                            <td>10AM-2AM</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Saturday</th>
-                            <td>10AM-2AM</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Sunday</th>
-                            <td>10AM-Midnight</td>
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        
         </section>
-    <section id="reserve" class="container-flex pb-3">
-        <h2>Reserve</h2>
-        <h4 id="reserveText">Make a reservation in our lounge and enjoy our live entertainment</h4>
-        <div id="reserve-container" class="container">
-        <div class="row">
-            <div class="col-1">
-                <label for="date">Date:</label><br />
-                <label for="time">Time:</label>
+        <nav
+            id="home"
+            class="navbar navbar-expand-lg navbar-light bg-pizzared justify-content-between"
+        >
+            <a href="#splash" class="navbar-brand">
+                <img
+                    src="images/pizza-svgrepo-com.svg"
+                    width="50"
+                    alt="PizzaLogo"
+                />
+                Spicy Pizza House
+            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-nav mr-auto"></div>
+                <ul class="navbar-nav flex-row ml-md-auto d-md-flex">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#order">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hours">Hours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reserve">Reserve</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                    <li>
+                        <a id="cartlink" class="nav-link" href="#cart"
+                            ><img width="20px" src="images/cart.png"
+                        /></a>
+                    </li>
+                </ul>
             </div>
-            <div class="col-3">
-                <input type="date" id="myDate" class="min-today" placeholder="yyyy-mm-dd">
-                <input type="time" id="appt" name="appt" class="time-now" placeholder="hh:mm ss">
-            </div>
-            <div class="col-2">
-                <label for="fname">First name:</label><br />
-                <label for="lname">Last name:</label><br />
-                <label for="number">Phone number:</label><br />
-                <label for="email">Customer email:</label><br />
-                <label for="guest"># Guest(s):</label>
-            </div>
-            <div class="col-3">
-                <input type="text" id="fname" name="fname">
-                <input type="text" id="lname" name="lname">
-                <input type="text" id="number" name="number">
-                <input type="text" id="email" name="email">
-                <input type="text" id="guest" name="guest">
-            </div>
-        </div>
-        </div>
-             
-        <div class="center">
-            <button class="btn btn-primary" id="get-date"> Make Reservation</button>
-
-        </div>
-      
- 
-    </section>
-    <section id="contact" class="container-flex pb-3 pl-5 pr-5">
-    <h2>Contact Us</h2>
-    <div class="contact-container">
-        <div class="row">
-            <div class="col center">
-                Conventiently located at 800 3 St SE, right in Downtown Calgary <br /><br />
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.417366247767!2d-114.05714644966987!3d51.0453808521003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5371700022f327d7%3A0x983cc1ce51764b3d!2s800%203%20St%20SE%2C%20Calgary%2C%20AB%20T2G%200E7!5e0!3m2!1sen!2sca!4v1601759879762!5m2!1sen!2sca" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            </div>
-            <div class="col center">
-                <div id="continfo">
-                    Phone: 403 123 4567<br />
-                    Email:<a href="mailto:info@pizza.com"> info@pizza.com</a>
+        </nav>
+        <section id="order" class="container-flex pl-5 pr-5 pb-3">
+            <h2>Order</h2>
+            <div id="card-group" class="row justify-content-center">
+                <div class="col-lg-4 center">
+                    <div onclick="showPizza()" class="card">
+                        <img
+                            class="card-img-top"
+                            src="images/pizza-svgrepo-com.svg"
+                            height="200px"
+                            alt="Card image cap"
+                        />
+                        <div class="card-body">
+                            <h3 class="card-text">Pizza</h3>
+                        </div>
+                    </div>
                 </div>
-                <div class="container mt-3">
-                    <form action="action_page.php">
-
-                        <label for="name">Name</label>
-                        <input type="text" id="fname" name="name" placeholder="Your name..">
-                        <br />
-                        <label for="email">Email</label>
-                        <input type="text" id="email" name="email" placeholder="Your email..">
-
-                        <textarea id="subject" name="subject" placeholder="Leave us a comment.." style="height:200px; width:100%"></textarea>
-
-                        <input class="btn-sm btn btn-primary"type="submit" value="Submit">
-
-                    </form>
+                <div class="col-lg-4">
+                    <div onclick="showWings()" class="card">
+                        <img
+                            class="card-img-top"
+                            src="images/chicken.png"
+                            height="200px"
+                            alt="Card image cap"
+                        />
+                        <div class="card-body">
+                            <h3 class="card-text">Wings</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div onclick="showDrinks()" class="card">
+                        <img
+                            class="card-img-top m-auto"
+                            src="images/drink.png"
+                            height="200px"
+                            alt="Card image cap"
+                        />
+                        <div class="card-body">
+                            <h3 class="card-text">Drinks</h3>
+                        </div>
+                    </div>
                 </div>
             </div>
-                
-        </div>
-          
-          
-    </div>
-    </section>
-    <section id="thanks" class="container-flex pb-3 thanks">
-        <h2>Thank you for your Reservation</h2>
-     
-        <div class="center">
-        <div id="full-name"></div>
-        <div id="date-select"></div>
-        
-        
-    </div>
-    </section>
-    <section id="cart" class="container-flex pb-3">
-        <h2>Cart</h2>
-        <div class="container" style="height:100%; overflow-y:auto">
-         </div>
-    </section>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
-    <script src="toppings.js"></script>
-    <script src="order.js"></script>
-  </body>
+        </section>
+        <section id="hours" class="container-flex pb-3">
+            <h2>
+                Hours of Operation <br /><span class="subtitle"
+                    >Come and visit us!</span
+                >
+            </h2>
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <table
+                        class="table table-dark table-bordered table-hover table-sm table-striped"
+                    >
+                        <tbody>
+                            <tr>
+                                <th scope="row">Monday</th>
+                                <td>10AM-Midnight</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tuesday</th>
+                                <td>10AM-Midnight</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Wednesday</th>
+                                <td>10AM-Midnight</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Thursday</th>
+                                <td>10AM-Midnight</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Friday</th>
+                                <td>10AM-2AM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Saturday</th>
+                                <td>10AM-2AM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Sunday</th>
+                                <td>10AM-Midnight</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section id="reserve" class="container-flex pb-3">
+            <h2>Reserve</h2>
+            <h4 id="reserveText">
+                Make a reservation in our lounge and enjoy our live
+                entertainment
+            </h4>
+            <div id="reserve-container" class="container">
+                <div class="row">
+                    <div class="col-1">
+                        <label for="date">Date:</label><br />
+                        <label for="time">Time:</label>
+                    </div>
+                    <div class="col-3">
+                        <input
+                            type="date"
+                            id="myDate"
+                            class="min-today"
+                            placeholder="yyyy-mm-dd"
+                        />
+                        <input
+                            type="time"
+                            id="appt"
+                            name="appt"
+                            class="time-now"
+                            placeholder="hh:mm ss"
+                        />
+                    </div>
+                    <div class="col-2">
+                        <label for="fname">First name:</label><br />
+                        <label for="lname">Last name:</label><br />
+                        <label for="number">Phone number:</label><br />
+                        <label for="email">Customer email:</label><br />
+                        <label for="guest"># Guest(s):</label>
+                    </div>
+                    <div class="col-3">
+                        <input type="text" id="fname" name="fname" />
+                        <input type="text" id="lname" name="lname" />
+                        <input type="text" id="number" name="number" />
+                        <input type="text" id="email" name="email" />
+                        <input type="text" id="guest" name="guest" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="center">
+                <button class="btn btn-primary" id="get-date">
+                    Make Reservation
+                </button>
+            </div>
+        </section>
+        <section id="contact" class="container-flex pb-3 pl-5 pr-5">
+            <h2>Contact Us</h2>
+            <div class="contact-container">
+                <div class="row">
+                    <div class="col center">
+                        Conventiently located at 800 3 St SE, right in Downtown
+                        Calgary <br /><br />
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.417366247767!2d-114.05714644966987!3d51.0453808521003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5371700022f327d7%3A0x983cc1ce51764b3d!2s800%203%20St%20SE%2C%20Calgary%2C%20AB%20T2G%200E7!5e0!3m2!1sen!2sca!4v1601759879762!5m2!1sen!2sca"
+                            width="400"
+                            height="300"
+                            frameborder="0"
+                            style="border: 0"
+                            allowfullscreen=""
+                            aria-hidden="false"
+                            tabindex="0"
+                        ></iframe>
+                    </div>
+                    <div class="col center">
+                        <div id="continfo">
+                            Phone: 403 123 4567<br />
+                            Email:<a href="mailto:info@pizza.com">
+                                info@pizza.com</a
+                            >
+                        </div>
+                        <div class="container mt-3">
+                            <form action="action_page.php">
+                                <label for="name">Name</label>
+                                <input
+                                    type="text"
+                                    id="fname"
+                                    name="name"
+                                    placeholder="Your name.."
+                                />
+                                <br />
+                                <label for="email">Email</label>
+                                <input
+                                    type="text"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Your email.."
+                                />
+
+                                <textarea
+                                    id="subject"
+                                    name="subject"
+                                    placeholder="Leave us a comment.."
+                                    style="height: 200px; width: 100%"
+                                ></textarea>
+
+                                <input
+                                    class="btn-sm btn btn-primary"
+                                    type="submit"
+                                    value="Submit"
+                                />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="thanks" class="container-flex pb-3 thanks">
+            <h2>Thank you for your Reservation</h2>
+
+            <div class="center">
+                <div id="full-name"></div>
+                <div id="date-select"></div>
+            </div>
+        </section>
+        <section id="cart" class="container-flex pb-3">
+            <h2>Cart</h2>
+            <div class="container" style="height: 100%; overflow-y: auto"></div>
+        </section>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"
+        ></script>
+        <script src="index.js"></script>
+        <script src="toppings.js"></script>
+        <script src="order.js"></script>
+    </body>
 </html>
